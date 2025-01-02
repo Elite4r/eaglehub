@@ -1,0 +1,100 @@
+body {
+    font-family: Cabin, arial;
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 4%;
+    font-size: 350%;
+}
+
+/* Make title bigger */
+h1 {
+    font-size: 270%;
+    margin-bottom: 2.5%;
+}
+
+h3 {
+    font-size: 90%;
+    border-bottom: 5px solid black;
+    padding-bottom: 7px;
+    display: inline-block;
+    margin-bottom: 5%;
+}
+
+p {
+    margin-top: -1%;
+    font-size: 50%;
+}
+
+a {
+    text-decoration: none;
+}
+/* Slide-in animation for the body */
+body {
+    animation: slideInBody 0.5s ease-out forwards;
+    transform: translateX(-100%);
+}
+
+@keyframes slideInBody {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Slide-in animations for .official and .three */
+.official, .three, .credit {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideInContent 0.5s ease-out forwards;
+}
+
+/* Animation for the content sliding in */
+@keyframes slideInContent {
+    from {
+        transform: translateX(-5%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Delay for sequential animations */
+.official {
+    animation-delay: 0.4s; /* Starts after the body has moved */
+}
+
+.three {
+    animation-delay: 0.6s; /* Starts after .official has moved */
+    margin-bottom: 7%;
+}
+
+.credit {
+    animation-delay: 0.9s;
+}
+
+/*Flexbox*/
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6%;
+}
+
+.three, .official {
+    flex: 1;
+    flex: 0 0 40%;
+}
+
+.credit {
+    flex-basis: 100%;
+    margin-top: -9%;
+}
+
+.ctext {
+    margin-top: -3.5%;
+}
