@@ -6,6 +6,12 @@ const urlsToCache = [
     '/icon-192.png',
     '/icon-512.png',
     '/official/index.html',
+    '/official/js.html',
+    '/clients/astra/js/ES6shimScript.txt',
+    '/clients/astra/js/assets.epk',
+    '/clients/astra/js/classes.js',
+    '/clients/astra/js/favicon.png',
+    '/clients/astra/js/index.html',
 ];
 
 self.addEventListener('install', (event) => {
